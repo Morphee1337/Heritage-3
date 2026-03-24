@@ -96,3 +96,27 @@ catch (Exception ex)
 {
     Console.WriteLine($"Erreur Maison jardin: {ex.Message}");
 }
+
+Console.WriteLine("\n=== Test Polymorphisme ===");
+
+List<Logement> logements = new List<Logement>();
+
+logements.Add(new Studio("S1", "Paris", 20, 500.0, true, true));
+logements.Add(new Appartement("A1", "Lyon", 60, 800.0, true, 3));
+logements.Add(new Maison("M1", "Lille", 100, 1200.0, true, 50));
+
+foreach (Logement l in logements)
+{
+    l.Afficher();
+    Console.WriteLine($"Loyer: {l.CalculerLoyer()} €\n");
+}
+
+Console.WriteLine("=== Test Locataire ===");
+
+Locataire alice = new Locataire(1, "Alice", "0123456789");
+Locataire bob = new Locataire(2, "Bob", "0987654321");
+Locataire ines = new Locataire(3, "Inès", "0567891234");
+
+alice.Afficher();
+bob.Afficher();
+ines.Afficher();
