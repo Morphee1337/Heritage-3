@@ -10,6 +10,8 @@ namespace tp_agence_logement
         protected double loyerBase;
         protected bool disponible;
 
+        public bool Disponible { get => disponible; set => disponible = value; }
+
         public Logement(string reference, string adresse, int surface, double loyerBase, bool disponible)
         {
             if (surface <= 0)

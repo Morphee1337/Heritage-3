@@ -120,3 +120,52 @@ Locataire ines = new Locataire(3, "Inès", "0567891234");
 alice.Afficher();
 bob.Afficher();
 ines.Afficher();
+
+Console.WriteLine("\n=== Test ContratLocation ===");
+
+// Create logements
+Studio studio2 = new Studio("S1", "Paris", 20, 500.0, true, true);
+Maison maison2 = new Maison("M1", "Lille", 100, 1200.0, true, 50);
+
+// Create contracts
+try
+{
+    ContratLocation contrat1 = new ContratLocation(101, alice, studio2, 5);
+    contrat1.Afficher();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur contrat studio: {ex.Message}");
+}
+
+try
+{
+    ContratLocation contrat2 = new ContratLocation(102, bob, maison2, 3);
+    contrat2.Afficher();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur contrat maison: {ex.Message}");
+}
+
+// Test nombreJours = 0
+try
+{
+    ContratLocation contratInvalide = new ContratLocation(103, ines, new Appartement("A1", "Lyon", 60, 800.0, true, 3), 0);
+    contratInvalide.Afficher();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur durée: {ex.Message}");
+}
+
+// Try relouer
+try
+{
+    ContratLocation contratRelou = new ContratLocation(104, ines, studio2, 2);
+    contratRelou.Afficher();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur relouer: {ex.Message}");
+}
