@@ -42,5 +42,10 @@ namespace tp_agence_logement
         {
             return loyerBase;
         }
+
+        public override string ToString()
+        {
+            return $"Référence: {reference}, Adresse: {adresse}, Surface: {surface} m², Loyer de base: {loyerBase} €, Disponible: {disponible}";
+        }
     }
 }

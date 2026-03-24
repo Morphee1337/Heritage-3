@@ -297,3 +297,8 @@ foreach (Logement l in agence.Logements)
         Console.WriteLine($"Appartement {a.Reference}: Nombre de pièces {a.NombrePieces}");
     }
 }
+
+Console.WriteLine("\n=== Test ToString() ===");
+
+Console.WriteLine(alice);
+Console.WriteLine(agence.Logements[0]);

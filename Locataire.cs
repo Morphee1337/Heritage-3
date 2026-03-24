@@ -20,6 +20,11 @@ namespace tp_agence_logement
             Console.WriteLine($"ID: {id}, Nom: {nom}, Téléphone: {telephone}");
         }
 
+        public override string ToString()
+        {
+            return $"ID: {id}, Nom: {nom}, Téléphone: {telephone}";
+        }
+
         // Getters for later use
         public int Id => id;
         public string Nom => nom;
