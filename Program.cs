@@ -256,3 +256,26 @@ catch (Exception ex)
 agence.AfficherLogements();
 agence.AfficherLocataires();
 agence.AfficherContrats();
+
+Console.WriteLine("\n=== Logements Disponibles ===");
+agence.AfficherLogementsDisponibles();
+
+Console.WriteLine("\n=== Test métier: modification loyer après contrat ===");
+
+// Create a new logement for test
+Logement testLogement = new Studio("S2", "Test", 25, 600.0, true, false);
+agence.AjouterLogement(testLogement);
+
+// Create contrat
+ContratLocation testContrat = new ContratLocation(106, alice, testLogement, 2);
+agence.AjouterContrat(testContrat);
+
+Console.WriteLine("Avant modification:");
+testContrat.Afficher();
+
+// Modify loyer
+testLogement.LoyerBase = 700.0;
+
+Console.WriteLine("Après modification du loyer du logement:");
+testContrat.Afficher();
+Console.WriteLine("Le contrat conserve le tarif journalier mémorisé.");
