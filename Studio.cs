@@ -18,14 +18,6 @@ namespace tp_agence_logement
             Console.WriteLine($"Meublé: {meuble}");
         }
 
-        public override double CalculerLoyer()
-        {
-            double loyer = base.CalculerLoyer();
-            if (meuble)
-            {
-                loyer += 50;
-            }
-            return loyer;
-        }
+        public bool Meuble => meuble;
     }
 }

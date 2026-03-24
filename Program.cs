@@ -279,3 +279,21 @@ testLogement.LoyerBase = 700.0;
 Console.WriteLine("Après modification du loyer du logement:");
 testContrat.Afficher();
 Console.WriteLine("Le contrat conserve le tarif journalier mémorisé.");
+
+Console.WriteLine("\n=== Test Casting et is ===");
+
+foreach (Logement l in agence.Logements)
+{
+    if (l is Maison m)
+    {
+        Console.WriteLine($"Maison {m.Reference}: Surface jardin {m.SurfaceJardin} m²");
+    }
+    if (l is Studio s)
+    {
+        Console.WriteLine($"Studio {s.Reference}: Meublé {s.Meuble}");
+    }
+    if (l is Appartement a)
+    {
+        Console.WriteLine($"Appartement {a.Reference}: Nombre de pièces {a.NombrePieces}");
+    }
+}

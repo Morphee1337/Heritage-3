@@ -22,9 +22,6 @@ namespace tp_agence_logement
             Console.WriteLine($"Surface jardin: {surfaceJardin} m²");
         }
 
-        public override double CalculerLoyer()
-        {
-            return base.CalculerLoyer() + surfaceJardin * 10;
-        }
+        public int SurfaceJardin => surfaceJardin;
     }
 }

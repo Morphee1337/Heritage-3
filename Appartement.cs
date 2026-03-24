@@ -22,9 +22,6 @@ namespace tp_agence_logement
             Console.WriteLine($"Nombre de pièces: {nombrePieces}");
         }
 
-        public override double CalculerLoyer()
-        {
-            return base.CalculerLoyer() + nombrePieces * 100;
-        }
+        public int NombrePieces => nombrePieces;
     }
 }
