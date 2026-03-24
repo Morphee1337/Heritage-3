@@ -36,3 +36,63 @@ catch (Exception ex)
 {
     Console.WriteLine($"Erreur loyer: {ex.Message}");
 }
+
+Console.WriteLine("\n=== Test Classes Dérivées ===");
+
+// Studio
+try
+{
+    Studio studio = new Studio("S1", "Paris", 20, 500.0, true, true);
+    studio.Afficher();
+    Console.WriteLine($"Loyer calculé: {studio.CalculerLoyer()} €");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur Studio: {ex.Message}");
+}
+
+// Appartement
+try
+{
+    Appartement appartement = new Appartement("A1", "Lyon", 60, 800.0, true, 3);
+    appartement.Afficher();
+    Console.WriteLine($"Loyer calculé: {appartement.CalculerLoyer()} €");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur Appartement: {ex.Message}");
+}
+
+// Maison
+try
+{
+    Maison maison = new Maison("M1", "Lille", 100, 1200.0, true, 50);
+    maison.Afficher();
+    Console.WriteLine($"Loyer calculé: {maison.CalculerLoyer()} €");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur Maison: {ex.Message}");
+}
+
+// Test invalide Appartement: nombrePieces < 1
+try
+{
+    Appartement appartementInvalide = new Appartement("A2", "Marseille", 50, 700.0, true, 0);
+    appartementInvalide.Afficher();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur Appartement pièces: {ex.Message}");
+}
+
+// Test invalide Maison: surfaceJardin < 0
+try
+{
+    Maison maisonInvalide = new Maison("M2", "Toulouse", 80, 1000.0, true, -10);
+    maisonInvalide.Afficher();
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur Maison jardin: {ex.Message}");
+}
