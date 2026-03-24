@@ -169,3 +169,90 @@ catch (Exception ex)
 {
     Console.WriteLine($"Erreur relouer: {ex.Message}");
 }
+
+Console.WriteLine("\n=== Test Agence ===");
+
+Agence agence = new Agence("Agence Immobilière");
+
+// Add logements
+try
+{
+    agence.AjouterLogement(new Studio("S1", "Paris", 20, 500.0, true, true));
+    agence.AjouterLogement(new Maison("M1", "Lille", 100, 1200.0, true, 50));
+    agence.AjouterLogement(new Appartement("A1", "Lyon", 60, 800.0, true, 3));
+    Console.WriteLine("Logements ajoutés.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur ajout logement: {ex.Message}");
+}
+
+// Try add duplicate reference
+try
+{
+    agence.AjouterLogement(new Studio("S1", "Paris", 20, 500.0, true, true));
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur duplicate logement: {ex.Message}");
+}
+
+// Add locataires
+try
+{
+    agence.AjouterLocataire(alice);
+    agence.AjouterLocataire(bob);
+    agence.AjouterLocataire(ines);
+    Console.WriteLine("Locataires ajoutés.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur ajout locataire: {ex.Message}");
+}
+
+// Try add duplicate id
+try
+{
+    agence.AjouterLocataire(new Locataire(1, "Dup", "000"));
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur duplicate locataire: {ex.Message}");
+}
+
+// Add contrats
+try
+{
+    agence.AjouterContrat(new ContratLocation(101, alice, agence.Logements[0], 5));
+    agence.AjouterContrat(new ContratLocation(102, bob, agence.Logements[1], 3));
+    agence.AjouterContrat(new ContratLocation(103, ines, agence.Logements[2], 7));
+    Console.WriteLine("Contrats ajoutés.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur ajout contrat: {ex.Message}");
+}
+
+// Try add contrat with unknown locataire
+try
+{
+    agence.AjouterContrat(new ContratLocation(104, new Locataire(4, "Unknown", "000"), agence.Logements[0], 1));
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur contrat locataire inconnu: {ex.Message}");
+}
+
+// Try add contrat with unknown logement
+try
+{
+    agence.AjouterContrat(new ContratLocation(105, alice, new Maison("M2", "Toulouse", 80, 1000.0, true, 20), 1));
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erreur contrat logement inconnu: {ex.Message}");
+}
+
+agence.AfficherLogements();
+agence.AfficherLocataires();
+agence.AfficherContrats();
