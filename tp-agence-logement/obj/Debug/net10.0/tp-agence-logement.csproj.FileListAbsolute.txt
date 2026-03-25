@@ -1,0 +1,15 @@
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\bin\Debug\net10.0\tp-agence-logement.exe
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\bin\Debug\net10.0\tp-agence-logement.deps.json
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\bin\Debug\net10.0\tp-agence-logement.runtimeconfig.json
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\bin\Debug\net10.0\tp-agence-logement.dll
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\bin\Debug\net10.0\tp-agence-logement.pdb
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.AssemblyInfoInputs.cache
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.AssemblyInfo.cs
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.csproj.CoreCompileInputs.cache
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.sourcelink.json
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.dll
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\refint\tp-agence-logement.dll
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.pdb
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\tp-agence-logement.genruntimeconfig.cache
+C:\Users\aisrael\Desktop\Cours\Heritage 3\tp-agence-logement\obj\Debug\net10.0\ref\tp-agence-logement.dll
